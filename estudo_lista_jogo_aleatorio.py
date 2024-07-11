@@ -1,27 +1,34 @@
-import random
 
-numero_aleatorio = random.randint(1,100)
-numero_usuario = 0
-cont = 0
-lista_numeros = []
+def main():
 
-print("\nUm número inteiro aleatório de 1 a 100 foi gerado, tente adivinhar.\n")
+    import random
 
-while numero_usuario != numero_aleatorio:
+    numero_aleatorio = random.randint(1,100)
+    numero_usuario = 0
+    cont = 0
+    lista_numeros = []
 
-    numero_usuario = int(input("Dê o seu palpite: "))
-    
-    if numero_usuario > numero_aleatorio:
-        print("O número informado é maior, tente um número menor.")
-    elif(numero_usuario < numero_aleatorio):
-        print("O número informado é menor, tente um número maior.")
-    elif(numero_usuario < 1 or numero_usuario > 100):
-        print("O número gerado é >= 1 e <= 100. Tente novamente.")
-    
-    lista_numeros.append(numero_usuario)
-    
-    cont += 1
+    print("\nUm número inteiro aleatório de 1 a 100 foi gerado, tente adivinhar.\n")
 
-print(f"\nParabéns! O número foi encontrado e era o número {numero_aleatorio}.")
-print(f"Quantidade de tentativas: {cont}")
-print(f"Todos os números digitados nas tentativas: {lista_numeros}")
+    while numero_usuario != numero_aleatorio:
+
+        numero_usuario = int(input("Dê o seu palpite: "))
+        
+        if numero_usuario > numero_aleatorio:
+            print("O número informado é maior, tente um número menor.")
+        elif(numero_usuario < numero_aleatorio):
+            print("O número informado é menor, tente um número maior.")
+        elif(numero_usuario < 1 or numero_usuario > 100):
+            print("O número gerado é >= 1 e <= 100. Tente novamente.")
+        
+        lista_numeros.append(numero_usuario)
+        
+        cont += 1
+
+    print(f"\nParabéns! O número foi encontrado e era o número {numero_aleatorio}.")
+    print(f"Quantidade de tentativas: {cont}")
+    print(f"Todos os números digitados nas tentativas: {lista_numeros}")
+
+
+
+main()
