@@ -13,7 +13,7 @@ def num_aleatorio(tamanho_lista):
 
 def origem_arquivo():
     # Define a origem do arquivo
-    arquivo = open(r'f:\palavras.txt', 'r')
+    arquivo = open(r'c:\palavras.txt', 'r')
     return arquivo
 
 def palavras_lista():
